@@ -1,4 +1,6 @@
-import { Grid, GridItem, Spacer, Stack } from "@chakra-ui/react";
+import { Grid, GridItem, Spacer, Stack, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+
 import NavButton from "./NavButton";
 
 function FilmGrid() {
@@ -16,12 +18,12 @@ function FilmGrid() {
     >
       <GridItem pl="2" bg="blue.900" area={"header"}>
         <Stack direction="row" spacing={1}>
-          <NavButton name="Home" />
-          <NavButton name="Film" />
-          <NavButton name="TV-Serier" />
+          <NavButton name="Home" to="/Home" />
+          <NavButton name="Film" to="/" />
+          <NavButton name="TV-Serier" to="/" />
           <Spacer />
-          <NavButton name="Personer" />
-          <NavButton name="Mere" />
+          <NavButton name="Personer" to="/" />
+          <NavButton name="Mere" to="/" />
         </Stack>
       </GridItem>
       <GridItem pl="2" bg="blackAlpha.800" area={"nav"}>
