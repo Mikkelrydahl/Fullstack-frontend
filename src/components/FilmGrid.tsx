@@ -1,8 +1,5 @@
 import { Grid, GridItem, Spacer, Stack, Button } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import NavBar from "./NavBar";
 import NavButton from "./NavButton";
-import fetchAllMovies from "../GetAll/GetAll";
 
 function FilmGrid() {
   return (
