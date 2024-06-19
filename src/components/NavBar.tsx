@@ -1,4 +1,4 @@
-import { Grid, GridItem, Spacer, Stack, Button } from "@chakra-ui/react";
+import { Grid, GridItem, Spacer, Stack,} from "@chakra-ui/react";
 import NavButton from "./NavButton";
 
 function NavBar() {
