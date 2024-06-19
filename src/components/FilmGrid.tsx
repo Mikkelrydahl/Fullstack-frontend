@@ -1,7 +1,8 @@
 import { Grid, GridItem, Spacer, Stack, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-
+import NavBar from "./NavBar";
 import NavButton from "./NavButton";
+import fetchAllMovies from "../GetAll/GetAll";
 
 function FilmGrid() {
   return (
@@ -27,7 +28,7 @@ function FilmGrid() {
         </Stack>
       </GridItem>
       <GridItem pl="2" bg="blackAlpha.800" area={"nav"}>
-        Nav
+        {<Button>Fetch All Movies</Button>}
       </GridItem>
       <GridItem pl="2" bg="blue.600" area={"main"}>
         Main

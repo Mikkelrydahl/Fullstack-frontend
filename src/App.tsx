@@ -9,6 +9,8 @@ import FilmGrid from "./components/FilmGrid";
 import ListGroup from "./components/ListGroup";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
+import NavBar from "./components/NavBar";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
