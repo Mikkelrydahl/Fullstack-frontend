@@ -1,5 +1,5 @@
 import { getAllMovies } from "../hooks/api";
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const fetchAllMovies = async () => {
   const movies = await getAllMovies();
