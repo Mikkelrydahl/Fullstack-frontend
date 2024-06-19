@@ -7,7 +7,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-function Login() {
+function Register() {
   return (
     <Box
       maxW="sm"
@@ -18,7 +18,7 @@ function Login() {
       borderRadius="md"
       bg="white"
     >
-      <Heading mb={6}>Login</Heading>
+      <Heading mb={6}>Register</Heading>
       <Stack spacing={3}>
         <FormLabel> Email </FormLabel>
         <Input placeholder="" />
@@ -27,11 +27,11 @@ function Login() {
         <Input placeholder="" />
 
         <Button type="submit" colorScheme="teal">
-          Login
+          Register
         </Button>
       </Stack>
     </Box>
   );
 }
 
-export default Login;
+export default Register;

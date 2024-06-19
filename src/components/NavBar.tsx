@@ -1,78 +1,32 @@
-import { Box, Button, HStack } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
-import React from "react";
+import { Grid, GridItem, Spacer, Stack, Button } from "@chakra-ui/react";
+import NavButton from "./NavButton";
 
-const NavBar: React.FC = () => {
-  const { isAuthenticated, role, logout } = useAuth();
+function NavBar() {
   return (
-    <Box bg="teal.500" p={4}>
-      <HStack spacing={4} justifyContent="space-between">
-        <HStack spacing={4}>
-          <Button
-            as={Link}
-            to="/"
-            colorScheme="teal"
-            variant="ghost"
-            color="white"
-            _hover={{ bg: "teal.600" }}
-          >
-            Fade Factory
-          </Button>
-        </HStack>
-        <HStack spacing={4}>
-          {isAuthenticated && role === "Admin" && (
-            <Button
-              as={Link}
-              to="/admin/dashboard"
-              colorScheme="teal"
-              variant="ghost"
-              color="white"
-              _hover={{ bg: "teal.600" }}
-            >
-              Dashboard
-            </Button>
-          )}
-          {!isAuthenticated ? (
-            <>
-              <Button
-                as={Link}
-                to="/login"
-                colorScheme="teal"
-                variant="solid"
-                color="white"
-                _hover={{ bg: "teal.600" }}
-              >
-                Login
-              </Button>
-              <Button
-                as={Link}
-                to="/register"
-                colorScheme="teal"
-                variant="ghost"
-                color="white"
-                _hover={{ bg: "teal.600" }}
-              >
-                Register
-              </Button>
-            </>
-          ) : (
-            <Button
-              onClick={() => {
-                logout();
-              }}
-              colorScheme="teal"
-              variant="solid"
-              color="white"
-              _hover={{ bg: "teal.600" }}
-            >
-              Logout
-            </Button>
-          )}
-        </HStack>
-      </HStack>
-    </Box>
+    <Grid
+      templateAreas={`"header header"
+                  "nav main"
+                  "nav footer"`}
+      gridTemplateRows={"80px 1fr 30px"}
+      gridTemplateColumns={"170px 1fr"}
+      h="1350px"
+      gap="0.5"
+      color="blackAlpha.700"
+      fontWeight="bold"
+    >
+      <GridItem pl="2" bg="blue.900" area={"header"}>
+        <Stack direction="row" spacing={1}>
+          <NavButton name="Home" to="/Home" />
+          <NavButton name="Film" to="/" />
+          <NavButton name="TV-Serier" to="/" />
+          <Spacer />
+          <NavButton name="Personer" to="/" />
+          <NavButton name="Mere" to="/" />
+        </Stack>
+      </GridItem>
+     
+    </Grid>
   );
-};
+}
 
 export default NavBar;

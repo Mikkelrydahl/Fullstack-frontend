@@ -1,11 +1,13 @@
-import FilmGrid from "../components/FilmGrid";
+import NavBar from "../components/NavBar";
 
 function App() {
   return (
     <div>
-      <FilmGrid></FilmGrid>
+ <NavBar />
     </div>
   );
 }
+
+
 
 export default App;
